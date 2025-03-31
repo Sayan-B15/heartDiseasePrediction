@@ -5,11 +5,7 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
 # ========== PAGE CONFIG ==========
-st.set_page_config(
-    page_title="Cardio Risk Assessment",
-    layout="wide",
-    page_icon="🫀"
-)
+st.set_page_config(page_title="Cardio Risk Assessment", page_icon="🫀")
 
 # ========== LOAD CSS ==========
 def load_css():
