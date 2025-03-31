@@ -234,6 +234,5 @@ if st.button("Predict", type="primary"):
 # ========== FOOTER ==========
 st.markdown("""
 ---
-*This tool is for clinical decision support only. Not a substitute for professional medical judgment.*  
-*Last updated: June 2024 | Version 2.3*
+*This tool is for clinical decision support only. Not a substitute for professional medical judgment.*
 """)
