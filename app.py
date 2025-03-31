@@ -53,16 +53,17 @@ with st.expander("CLINICAL MEASUREMENTS", expanded=True):
             ["Normal", "Above Normal", "Well Above Normal"],
             index=1
         )
-        height = st.number_input("Height (cm)", min_value=100, max_value=250, value=170)
         ap_hi = st.number_input("Systolic BP (mmHg)", min_value=50, max_value=300, value=135)
+        ap_lo = st.number_input("Diastolic BP (mmHg)", min_value=30, max_value=200, value=83)
+
     with col2:
         gluc = st.selectbox(
             "Glucose Level",
             ["Normal", "Above Normal", "Well Above Normal"],
             index=1
         )
+        height = st.number_input("Height (cm)", min_value=100, max_value=250, value=170)
         weight = st.number_input("Weight (kg)", min_value=30, max_value=300, value=70)
-        ap_lo = st.number_input("Diastolic BP (mmHg)", min_value=30, max_value=200, value=83)
 
 with st.expander("LIFESTYLE FACTORS", expanded=False):
     col1, col2 = st.columns(2)
