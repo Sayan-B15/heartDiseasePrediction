@@ -37,7 +37,7 @@ with st.expander("PATIENT INFORMATION", expanded=True):
     with col1:
         gender = st.radio("Sex", ["Male", "Female"])
     with col2:
-        age = st.number_input("Age (years)", min_value=18, max_value=120, value=35)
+        age = st.number_input("Age (years)", min_value=18, max_value=120, value=25)
     with col3:
         family_history = st.checkbox("Family history of early CVD")
 
@@ -47,16 +47,16 @@ with st.expander("CLINICAL MEASUREMENTS", expanded=True):
         cholesterol = st.selectbox(
             "Cholesterol Level",
             ["Normal", "Above Normal", "Well Above Normal"],
-            index=1
+            index=0
         )
-        ap_hi = st.number_input("Systolic BP (mmHg)", min_value=50, max_value=300, value=135)
-        ap_lo = st.number_input("Diastolic BP (mmHg)", min_value=30, max_value=200, value=83)
+        ap_hi = st.number_input("Systolic BP (mmHg)", min_value=50, max_value=300, value=120)
+        ap_lo = st.number_input("Diastolic BP (mmHg)", min_value=30, max_value=200, value=80)
 
     with col2:
         gluc = st.selectbox(
             "Glucose Level",
             ["Normal", "Above Normal", "Well Above Normal"],
-            index=1
+            index=0
         )
         height = st.number_input("Height (cm)", min_value=100, max_value=250, value=170)
         weight = st.number_input("Weight (kg)", min_value=30, max_value=300, value=70)
