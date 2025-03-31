@@ -1,62 +1,116 @@
-/* Base styles */
-body, p, div, span, h1, h2, h3, h4, h5, h6 {
-    color:rgb(255, 254, 254) !important;
+/* Main theme variables */
+:root {
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --input-bg: #f0f0f0;
+  --risk-high: #D62728;
+  --risk-moderate: #FF7F0E;
+  --risk-low: #2CA02C;
+  --border-color: #e0e0e0;
+  --button-color: #D62728; /* Red color for predict button */
 }
 
-.stApp {
-    background-color:rgb(34, 34, 34);
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #ffffff;
+    --background-color: #222222;
+    --input-bg: #333333;
+    --border-color: #444444;
+  }
 }
 
-/* Input components - keep most text dark */
-.stRadio, .stNumberInput, .stCheckbox, .stButton>button {
-    color:rgb(0, 0, 0) !important;
+/* General text styling */
+.main {
+  color: var(--text-color) !important;
 }
 
-/* Dropdown fixes - make dropdown items white on dark background */
-div[data-baseweb="select"] div {
-    color: white !important;
-    background-color: #333333 !important;
+/* Risk indicators - these should stand out in both modes */
+.risk-high {
+  color: var(--risk-high) !important;
+  font-weight: bold;
+}
+
+.risk-moderate {
+  color: var(--risk-moderate) !important;
+  font-weight: bold;
+}
+
+.risk-low {
+  color: var(--risk-low) !important;
+  font-weight: bold;
+}
+
+/* Input components */
+.stRadio, .stNumberInput, .stCheckbox {
+  color: var(--text-color) !important;
+}
+
+/* Regular buttons */
+.stButton>button {
+  color: var(--text-color) !important;
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Primary button - force it to be red */
+/* Target all possible primary button classes */
+button[kind="primary"],
+.stButton button[kind="primary"],
+.stPrimary,
+button.stPrimary,
+.primary-button,
+[data-baseweb="button"][kind="primary"],
+button[data-testid*="primary"],
+.st-emotion-cache-19rxjzo {
+  background-color: #D62728 !important;
+  color: white !important;
+  border-color: #D62728 !important;
+  font-weight: bold !important;
+}
+
+/* Dropdown styling - more specific selectors */
+div[data-baseweb="select"] div,
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] ul li {
+  color: var(--text-color) !important;
+  background-color: var(--input-bg) !important;
+}
+
+/* Style for dropdown options when the dropdown is open */
+div[role="listbox"] ul li {
+  color: var(--text-color) !important;
+  background-color: var(--input-bg) !important;
+}
+
+/* Hover state for all dropdown options */
+div[role="listbox"] ul li:hover {
+  background-color: rgba(128, 128, 128, 0.2) !important;
+}
+
+/* Selected state for dropdown options */
+div[role="listbox"] ul li[aria-selected="true"] {
+  background-color: rgba(128, 128, 128, 0.3) !important;
 }
 
 /* Selected dropdown item */
 div[data-baseweb="select"] div[aria-selected="true"] {
-    background-color:rgb(0, 0, 0) !important;
-    color: white !important;
-}
-
-/* Dropdown popup menu */
-div[role="listbox"] div {
-    color: #333333 !important;
-    background-color: white !important;
-}
-
-/* Hover state for dropdown items */
-div[role="listbox"] div:hover {
-    background-color: #F5F5F5 !important;
-}
-
-/* Risk indicators */
-.risk-high {
-    color: #D62728 !important;
-    font-weight: bold;
-}
-
-.risk-moderate {
-    color: #FF7F0E !important;
-    font-weight: bold;
-}
-
-.risk-low {
-    color: #2CA02C !important;
-    font-weight: bold;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
 }
 
 /* Expander headers */
 .st-emotion-cache-1qg05tj {
-    color: #333333 !important;
+  color: var(--text-color) !important;
 }
 
 /* Markdown text */
 .stMarkdown {
-    color: #333333 !important;
+  color: var(--text-color) !important;
+}
+
+/* Optional: Add a theme toggle button for users to switch manually */
+.theme-toggle {
+  float: right;
+  margin: 10px;
 }
