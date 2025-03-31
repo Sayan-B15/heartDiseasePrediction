@@ -1,0 +1,62 @@
+/* Base styles */
+body, p, div, span, h1, h2, h3, h4, h5, h6 {
+    color:rgb(255, 254, 254) !important;
+}
+
+.stApp {
+    background-color:rgb(34, 34, 34);
+}
+
+/* Input components - keep most text dark */
+.stRadio, .stNumberInput, .stCheckbox, .stButton>button {
+    color:rgb(0, 0, 0) !important;
+}
+
+/* Dropdown fixes - make dropdown items white on dark background */
+div[data-baseweb="select"] div {
+    color: white !important;
+    background-color: #333333 !important;
+}
+
+/* Selected dropdown item */
+div[data-baseweb="select"] div[aria-selected="true"] {
+    background-color:rgb(0, 0, 0) !important;
+    color: white !important;
+}
+
+/* Dropdown popup menu */
+div[role="listbox"] div {
+    color: #333333 !important;
+    background-color: white !important;
+}
+
+/* Hover state for dropdown items */
+div[role="listbox"] div:hover {
+    background-color: #F5F5F5 !important;
+}
+
+/* Risk indicators */
+.risk-high {
+    color: #D62728 !important;
+    font-weight: bold;
+}
+
+.risk-moderate {
+    color: #FF7F0E !important;
+    font-weight: bold;
+}
+
+.risk-low {
+    color: #2CA02C !important;
+    font-weight: bold;
+}
+
+/* Expander headers */
+.st-emotion-cache-1qg05tj {
+    color: #333333 !important;
+}
+
+/* Markdown text */
+.stMarkdown {
+    color: #333333 !important;
+}
